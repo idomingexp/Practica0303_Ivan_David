@@ -16,9 +16,9 @@ while jugando:
         if event.type == pygame.QUIT:
             jugando = False
 
-    # Se pinta la ventana con un color
+    # Se pinta la ventana con un color(Los 3 números son los datos de R, G, B)
     # Esto borra los posibles elementos que teníamos anteriormente
-    ventana.fill((255, 255, 255))
+    ventana.fill((39,55,70))
 
     # Todos los elementos del juego se vuelven a dibujar
     pygame.display.flip()
