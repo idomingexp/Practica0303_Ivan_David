@@ -5,7 +5,7 @@ pygame.init()
 
 # Inicialización de la superficie de dibujo (Primer dato--> Anchura, Segunda dato--> Altura)
 ventana = pygame.display.set_mode((1080,720))
-pygame.display.set_caption("Ejemplo 1")
+pygame.display.set_caption("Arkanoid")
 
 # Bucle principal del juego
 jugando = True
