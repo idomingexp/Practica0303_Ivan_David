@@ -3,8 +3,8 @@ import pygame
 # Inicialización de Pygame
 pygame.init()
 
-# Inicialización de la superficie de dibujo
-ventana = pygame.display.set_mode((1080,480))
+# Inicialización de la superficie de dibujo (Primer dato--> Anchura, Segunda dato--> Altura)
+ventana = pygame.display.set_mode((1080,720))
 pygame.display.set_caption("Ejemplo 1")
 
 # Bucle principal del juego
