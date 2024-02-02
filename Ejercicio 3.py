@@ -11,7 +11,7 @@ ventana.blit(fondo, (0,0))
 #Cargamos la bola
 ball = pygame.image.load("ball.png")
 ballrect = ball.get_rect()
-speed = [3,3]
+speedball = [3,3]
 ballrect.move_ip(0,0)
 
 # Crea el objeto bate, y obtengo su rectángulo
@@ -37,11 +37,15 @@ while jugando:
 
     # Compruebo si hay colisión
     if baterect.colliderect(ballrect):
-        speed[1] = -speed[1]
+        speedball[1] = -speedball[1]
     ballrect = ballrect.move(speed)
     if ballrect.left < 0 or ballrect.right > ventana.get_width():
-        speed[0] = -speed[0]
+        speedball[0] = -speedball[0]
     if ballrect.top < 0 or ballrect.bottom > ventana.get_height():
+        speedball[1] = -speedball[1]
+    if baterect.left < 0 or baterect.right > ventana.get_width():
+        speed[0] = -speed[0]
+    if baterect.top < 0 or baterect.bottom > ventana.get_height():
         speed[1] = -speed[1]
      #Borrar lo que habia en la ventana
     ventana.fill((0,0,0))
