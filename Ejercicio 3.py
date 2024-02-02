@@ -4,6 +4,11 @@ pygame.init()
 ventana = pygame.display.set_mode((1200,673))
 pygame.display.set_caption("Ejemplo 3")
 
+#Cargamos el fondo de la ventana
+fondo = pygame.image.load("fondo.jpg")
+ventana.blit(fondo, (0,0))
+
+#Cargamos la bola
 ball = pygame.image.load("ball.png")
 ballrect = ball.get_rect()
 speed = [3,3]
@@ -38,7 +43,10 @@ while jugando:
         speed[0] = -speed[0]
     if ballrect.top < 0 or ballrect.bottom > ventana.get_height():
         speed[1] = -speed[1]
-    ventana.fill((39,55,70))
+     #Borrar lo que habia en la ventana
+    ventana.fill((0,0,0))
+     #Ponemos todo el rato el fondo
+    ventana.blit(fondo, (0,0))
     ventana.blit(ball, ballrect)
 
     # Dibujo el bate
