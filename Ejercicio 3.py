@@ -14,6 +14,7 @@ bate = pygame.image.load("bate.png")
 baterect = bate.get_rect()
 
 # Pongo el bate en la parte inferior de la pantalla
+# Primer dato es la posición horizontal y segundo la vertical
 baterect.move_ip(540,620)
 
 jugando = True
