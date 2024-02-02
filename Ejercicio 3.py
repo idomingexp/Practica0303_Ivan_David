@@ -1,7 +1,7 @@
 import pygame
 
 pygame.init()
-ventana = pygame.display.set_mode((1080,720))
+ventana = pygame.display.set_mode((1200,673))
 pygame.display.set_caption("Ejemplo 3")
 
 ball = pygame.image.load("ball.png")
