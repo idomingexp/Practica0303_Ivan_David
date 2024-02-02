@@ -44,7 +44,7 @@ while jugando:
         speed[0] = -speed[0]
     if ballrect.top < 0 or ballrect.bottom > ventana.get_height():
         speed[1] = -speed[1]
-    
+    #Hacemos que el bate no se salga de los limites de la pantalla
     if baterect.left < 0:
        baterect = baterect.move(4,0)
     if baterect.right > ventana.get_width():
